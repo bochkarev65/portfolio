@@ -3,8 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Александр Бочкарёв — Руководитель цифровой трансформации · Руководитель проектов</title>
+<title>Александр Бочкарев — Руководитель цифровой трансформации · Руководитель проектов</title>
 <meta name="description" content="Портфолио Александра Бочкарёва — 10 лет в IT-руководстве, 30+ реализованных проектов, AI/LLM в продакшне, WMS, ЭДО, цифровая трансформация.">
+
+<!-- OpenGraph / Telegram / WhatsApp / LinkedIn -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://bochkarev65.github.io/portfolio/">
+<meta property="og:title"       content="Александр Бочкарев — Руководитель IT-проектов · Цифровая трансформация">
+<meta property="og:description" content="10 лет в IT · 30+ проектов · AI/LLM в продакшне · WMS · 44-ФЗ/223-ФЗ · Команда 16 человек · Москва">
+<meta property="og:image"       content="https://bochkarev65.github.io/portfolio/og-cover.jpg">
+<meta property="og:locale"      content="ru_RU">
+
+<!-- Twitter Card (Telegram использует этот формат) -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="Александр Бочкарев — Руководитель IT-проектов">
+<meta name="twitter:description" content="10 лет в IT · 30+ проектов · AI/LLM в продакшне · Москва">
+<meta name="twitter:image"       content="https://bochkarev65.github.io/portfolio/og-cover.jpg">
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108598460', 'ym');
+
+    ym(108598460, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108598460" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
 <style>
   :root {
     --bg: #0d0f14;
@@ -124,53 +153,51 @@
   }
   .tag:hover { border-color: var(--accent); color: var(--accent); }
 
-  /* ── ACHIEVEMENTS ── */
-  #achievements { background: var(--bg2); border-radius: var(--radius); margin: 0 5%; padding: 44px 48px; max-width: none; }
-  .metrics-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2px;
-    margin-bottom: 32px;
-  }
-  .metric-card {
+  /* ── EDUCATION ── */
+  #education { background: var(--bg2); border-radius: var(--radius); margin: 0 5%; padding: 44px 48px; max-width: none; }
+  .edu-layout { display: grid; grid-template-columns: 260px 1fr; gap: 32px; align-items: start; }
+  .edu-degree-card {
     background: var(--bg); border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 28px 24px;
-    text-align: center; transition: all .25s; position: relative; overflow: hidden;
+    border-radius: var(--radius); padding: 28px 22px;
+    border-top: 3px solid var(--accent); position: sticky; top: 80px;
   }
-  .metric-card::after {
-    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+  .edu-degree-icon { font-size: 2rem; margin-bottom: 12px; }
+  .edu-degree-badge {
+    display: inline-block; background: rgba(79,142,247,.12);
+    color: var(--accent); font-size: .72rem; font-weight: 600;
+    padding: 3px 10px; border-radius: 12px; margin-bottom: 14px; letter-spacing: .5px;
+  }
+  .edu-degree-year { font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 8px; line-height: 1; }
+  .edu-degree-uni { font-size: .92rem; font-weight: 700; margin-bottom: 4px; line-height: 1.3; }
+  .edu-degree-city { font-size: .8rem; color: var(--text2); margin-bottom: 10px; }
+  .edu-degree-spec { font-size: .82rem; color: var(--text2); border-top: 1px solid var(--border); padding-top: 10px; margin-top: 6px; line-height: 1.4; }
+  .certs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .cert-card {
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 16px 18px;
+    transition: all .25s; position: relative; overflow: hidden;
+  }
+  .cert-card::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
     background: linear-gradient(90deg, var(--accent), var(--accent2));
     transform: scaleX(0); transition: transform .3s; transform-origin: left;
   }
-  .metric-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: var(--shadow); }
-  .metric-card:hover::after { transform: scaleX(1); }
-  .metric-value {
-    font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;
-    color: var(--accent); line-height: 1; margin-bottom: 8px;
-    letter-spacing: -1px;
+  .cert-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow); }
+  .cert-card:hover::after { transform: scaleX(1); }
+  .cert-year { font-size: .72rem; font-weight: 700; color: var(--green); letter-spacing: 1.5px; margin-bottom: 6px; }
+  .cert-title { font-size: .86rem; font-weight: 600; color: var(--text); margin-bottom: 6px; line-height: 1.35; }
+  .cert-org { font-size: .76rem; color: var(--text2); margin-bottom: 10px; }
+  .cert-tag {
+    display: inline-block; background: rgba(79,142,247,.08);
+    color: var(--accent); font-size: .7rem; padding: 2px 9px;
+    border-radius: 10px; border: 1px solid rgba(79,142,247,.2);
   }
-  .metric-value.green { color: var(--green); }
-  .metric-label { font-size: .78rem; color: var(--text2); line-height: 1.4; }
-  .metric-label strong { display: block; color: var(--text); font-size: .82rem; margin-bottom: 2px; }
-  .metric-divider {
-    display: flex; align-items: center; gap: 12px;
-    color: var(--text2); font-size: .78rem; letter-spacing: 1px;
-    text-transform: uppercase; margin: 28px 0 20px;
-  }
-  .metric-divider::before, .metric-divider::after {
-    content: ''; flex: 1; height: 1px; background: var(--border);
-  }
-  .metrics-grid-2 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2px;
-  }
+  @media (max-width: 1024px) { .certs-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 900px) {
-    .metrics-grid, .metrics-grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .edu-layout { grid-template-columns: 1fr; }
+    .edu-degree-card { position: static; }
   }
-  @media (max-width: 480px) {
-    .metrics-grid, .metrics-grid-2 { grid-template-columns: 1fr 1fr; }
-  }
+  @media (max-width: 480px) { .certs-grid { grid-template-columns: 1fr; } }
 
   /* ── PROJECTS ── */
   #projects { }
@@ -292,6 +319,7 @@
     <li><a href="#about">О себе</a></li>
     <li><a href="#projects">Проекты</a></li>
     <li><a href="#experience">Опыт</a></li>
+    <li><a href="#education">Образование</a></li>
     <li><a href="#contact">Контакты</a></li>
   </ul>
   <a href="https://t.me/AleksB65" class="nav-cta">Написать в Telegram</a>
@@ -312,6 +340,7 @@
     <div class="hero-actions">
       <a href="#projects" class="btn-primary">Посмотреть проекты</a>
       <a href="#contact" class="btn-outline">Связаться</a>
+      <a href="./resume.pdf" download="Бочкарев_Александр_резюме.pdf" class="btn-outline">⬇ Скачать резюме</a>
     </div>
     <div class="hero-contacts">
       <a href="tel:+79244086323">📱 +7 (924) 408-63-23</a>
@@ -331,11 +360,12 @@
       <p>Прошёл путь от системного администратора до руководителя цифровой трансформации. Управлял <strong>производственным участком (30+ человек, Lean, WMS)</strong> — понимаю процессы не только на уровне систем, но и "на земле". Выстроил IT-проектный отдел с нуля (16 специалистов), реализовал <strong>30+ проектов</strong> полного цикла — от WMS и ЛИС до управленческого учёта и AI в производственном контуре.</p>
       <p><strong>Проектное управление × Техническая архитектура × AI и автоматизация.</strong></p>
       <p>Реально внедрял LLM в производственный контур — не как эксперимент, а как рабочий инструмент: корпоративный бот, RAG, транскрибация звонков в 1С — всё в закрытом контуре без передачи данных наружу.</p>
-      <p>Ключевые домены: цифровая трансформация, Healthcare IT / МИС / ЛИС, складские и производственные системы, управленческий учёт (1С), импортозамещение, 44-ФЗ / 223-ФЗ.</p>
+      <p>Ключевые домены: цифровая трансформация, Healthcare IT / МИС / ЛИС, складские и производственные системы, управленческий учёт (1С), импортозамещение, 44-ФЗ / 223-ФЗ, ЧЗ / ГИС МТ.</p>
       <div class="about-highlight">
         <strong>Свидетельства о регистрации программ ЭВМ (Роспатент):</strong><br>
         № 2024682243 — WMS-система (2024)<br>
-        № 2026613236 — «Учет активов ИТ» (05 февраля 2026)
+        № 2026613236 — «Учет активов ИТ» (05 февраля 2026)<br>
+        № 2026616123 — «Фин. блок» (2026)
       </div>
     </div>
     <div class="skills-grid">
@@ -380,7 +410,9 @@
           <span class="tag">REST API</span>
           <span class="tag">Docker / Docker Compose</span>
           <span class="tag">Nginx / Apache / IIS</span>
+          <span class="tag">PWA (разработка)</span>
           <span class="tag">КриптоПро / ЭЦП</span>
+          <span class="tag">ЧЗ / ГИС МТ</span>
         </div>
       </div>
       <div class="skill-group">
@@ -393,6 +425,7 @@
           <span class="tag">Linux (Ubuntu, Debian)</span>
           <span class="tag">iSCSI / SAN</span>
           <span class="tag">Veeam / Acronis</span>
+          <span class="tag">RPO / RTO политики</span>
         </div>
       </div>
       <div class="skill-group">
@@ -415,11 +448,12 @@
         <div class="tags">
           <span class="tag">Agile / Scrum / Kanban</span>
           <span class="tag">Waterfall / PMBoK</span>
-          <span class="tag">Roadmap / KPI</span>
+          <span class="tag">Roadmap / OKR / KPI</span>
           <span class="tag">Управление рисками</span>
           <span class="tag">Бюджетирование / P&L</span>
           <span class="tag">Vendor management</span>
           <span class="tag">Presale / защита проектов</span>
+          <span class="tag">Change Management</span>
           <span class="tag">ITIL / ITSM / SLA</span>
           <span class="tag">44-ФЗ / 223-ФЗ</span>
         </div>
@@ -427,52 +461,6 @@
     </div>
   </div>
 </section>
-
-<!-- ACHIEVEMENTS -->
-<div style="padding: 0 0 60px;">
-<section id="achievements">
-  <div class="section-label">Ключевые результаты</div>
-  <h2>Цифры говорят <span>сами за себя</span></h2>
-
-  <div class="metrics-grid">
-    <div class="metric-card">
-      <div class="metric-value">99,95%</div>
-      <div class="metric-label"><strong>Точность WMS</strong>склад 30 000 м², собственная разработка</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-value">−92%</div>
-      <div class="metric-label"><strong>Время согласования ЭДО</strong>5 дней → 4 часа</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-value green">4,2 млн</div>
-      <div class="metric-label"><strong>₽/год экономия</strong>WMS архивных документов</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-value">12 мин</div>
-      <div class="metric-label"><strong>Анализ 100-стр. отчёта</strong>AI/LLM в закрытом контуре (было 3 часа)</div>
-    </div>
-  </div>
-
-  <div class="metrics-grid-2">
-    <div class="metric-card">
-      <div class="metric-value">−85%</div>
-      <div class="metric-label"><strong>Время запуска проекта</strong>2 недели → 3 дня</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-value green">30 мин</div>
-      <div class="metric-label"><strong>Управленческая отчётность</strong>BI для ТОП (было 3 дня)</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-value">+210%</div>
-      <div class="metric-label"><strong>Рост B2B-заявок</strong>после редизайна сайта за 6 месяцев</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-value green">2</div>
-      <div class="metric-label"><strong>Свидетельства ЭВМ</strong>Роспатент: WMS-система и «Учет активов ИТ»</div>
-    </div>
-  </div>
-</section>
-</div>
 
 <!-- PROJECTS -->
 <section id="projects">
@@ -875,6 +863,93 @@
   </div>
 </section>
 
+<!-- EDUCATION -->
+<div style="padding: 0 0 60px;">
+<section id="education">
+  <div class="section-label">Образование и сертификаты</div>
+  <h2>Обучение и <span>развитие</span></h2>
+
+  <div class="edu-layout">
+
+    <div class="edu-degree-card">
+      <div class="edu-degree-icon">🎓</div>
+      <div class="edu-degree-badge">Высшее образование</div>
+      <div class="edu-degree-year">2015</div>
+      <div class="edu-degree-uni">Тихоокеанский государственный университет</div>
+      <div class="edu-degree-city">Хабаровск</div>
+      <div class="edu-degree-spec">ТЭФ · Технология транспортного процесса</div>
+    </div>
+
+    <div class="certs-grid">
+
+      <div class="cert-card">
+        <div class="cert-year">2025</div>
+        <div class="cert-title">Применение LLM и RAG в корпоративных системах</div>
+        <div class="cert-org">Stepik</div>
+        <span class="cert-tag">AI / Автоматизация</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-year">2025</div>
+        <div class="cert-title">ITIL 4 Foundation — управление IT-сервисами</div>
+        <div class="cert-org">Merion Academy</div>
+        <span class="cert-tag">ITSM</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-year">2024</div>
+        <div class="cert-title">Управление IT-проектами по стандарту PMBoK</div>
+        <div class="cert-org">Нетология</div>
+        <span class="cert-tag">Проектный менеджмент</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-year">2024</div>
+        <div class="cert-title">Основы информационной безопасности и защита корпоративных систем</div>
+        <div class="cert-org">Инфосистемы Джет</div>
+        <span class="cert-tag">Информационная безопасность</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-year">2023</div>
+        <div class="cert-title">VMware vSphere 7</div>
+        <div class="cert-org">Merion Academy</div>
+        <span class="cert-tag">Виртуализация</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-year">2023</div>
+        <div class="cert-title">Моделирование бизнес-процессов в нотации BPMN 2.0</div>
+        <div class="cert-org">Школа прикладного бизнес-анализа (IIBA Россия)</div>
+        <span class="cert-tag">Бизнес-анализ</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-year">2021</div>
+        <div class="cert-title">Бережливое производство</div>
+        <div class="cert-org">СПбГЭТУ «ЛЭТИ»</div>
+        <span class="cert-tag">Lean / 5S</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-year">2019</div>
+        <div class="cert-title">Администрирование InStock WMS Грейд 1, Грейд 2</div>
+        <div class="cert-org">Instock Technologies</div>
+        <span class="cert-tag">WMS</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-year">2017</div>
+        <div class="cert-title">Системы обеспечения комплексной безопасности</div>
+        <div class="cert-org">ФКУ «НИЦ «Охрана» Росгвардии</div>
+        <span class="cert-tag">Безопасность</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+</div>
+
 <!-- CONTACT -->
 <div style="padding: 0 0 0;">
 <section id="contact">
@@ -882,7 +957,7 @@
     <div class="contact-text">
       <div class="section-label">Контакты</div>
       <h2>Открыт к <span>предложениям</span></h2>
-      <p>Рассматриваю позиции: Директор по цифровой трансформации · IT-директор · Руководитель IT-проектов. Москва, офис / гибрид / удалённо. Готов к командировкам.</p>
+      <p>Рассматриваю позиции: Руководитель по цифровой трансформации · Руководитель IT-проектов. Москва, офис / гибрид / удалённо. Готов к командировкам.</p>
       <div class="contact-note">
         <h4>Ожидания</h4>
         <ul>
