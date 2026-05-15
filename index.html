@@ -896,27 +896,27 @@
 
     <button class="filter-btn active" onclick="filterProjects('all', this)">Все</button>
 
-    <button class="filter-btn" onclick="filterProjects('logistics', this)">Логистика / WMS</button>
+    <button class="filter-btn" onclick="filterProjects('management', this)">Управленческий учёт</button>
+
+    <button class="filter-btn" onclick="filterProjects('wms', this)">Складской учёт / WMS</button>
+
+    <button class="filter-btn" onclick="filterProjects('medtech', this)">MedTech</button>
 
     <button class="filter-btn" onclick="filterProjects('ai', this)">AI / Автоматизация</button>
-
-    <button class="filter-btn" onclick="filterProjects('analytics', this)">Аналитика</button>
 
     <button class="filter-btn" onclick="filterProjects('infra', this)">Инфраструктура</button>
 
     <button class="filter-btn" onclick="filterProjects('pmo', this)">PMO / Команда</button>
 
-    <button class="filter-btn" onclick="filterProjects('healthcare', this)">Healthcare / МИС</button>
-
   </div>
 
   <div class="projects-grid" id="projectsGrid">
 
-    <div class="project-card" data-cat="logistics">
+    <div class="project-card" data-cat="wms">
 
       <div class="project-meta">
 
-        <span class="project-cat">Логистика / WMS</span>
+        <span class="project-cat">Складской учёт / WMS</span>
 
         <span class="project-dur">12 мес · 4 чел.</span>
 
@@ -942,11 +942,11 @@
 
     </div>
 
-    <div class="project-card" data-cat="logistics">
+    <div class="project-card" data-cat="management">
 
       <div class="project-meta">
 
-        <span class="project-cat">Логистика / Автоматизация</span>
+        <span class="project-cat">Управленческий учёт / Логистика</span>
 
         <span class="project-dur">12 мес · 5 чел.</span>
 
@@ -972,11 +972,11 @@
 
     </div>
 
-    <div class="project-card" data-cat="logistics">
+    <div class="project-card" data-cat="management">
 
       <div class="project-meta">
 
-        <span class="project-cat">Логистика / ERP</span>
+        <span class="project-cat">Управленческий учёт / ERP</span>
 
         <span class="project-dur">8 мес · 4 чел.</span>
 
@@ -1000,11 +1000,11 @@
 
     </div>
 
-    <div class="project-card" data-cat="logistics">
+    <div class="project-card" data-cat="wms">
 
       <div class="project-meta">
 
-        <span class="project-cat">Документооборот / WMS</span>
+        <span class="project-cat">Складской учёт / WMS</span>
 
         <span class="project-dur">2 мес · 4 чел.</span>
 
@@ -1032,23 +1032,23 @@
 
       <div class="project-meta">
 
-        <span class="project-cat">AI / LLM</span>
+        <span class="project-cat">AI / Автоматизация</span>
 
-        <span class="project-dur">3 мес · 2 чел.</span>
+        <span class="project-dur">2 мес · 2 чел.</span>
 
       </div>
 
-      <h3>AI-интеграция в организации (закрытый контур)</h3>
+      <h3>AI-бот на корпоративном портале (закрытый контур)</h3>
 
-      <p class="project-desc">Локальный AI-стек: Ollama LLM, Dify, RAG + Reranker, Stable Diffusion, ASR Vosk. ИИ-бот на внутренний портал. Транскрибация звонков в 1С. Все данные остаются внутри организации.</p>
+      <p class="project-desc">Локальный LLM (Ollama + Dify) на внутреннем портале. Ответы на вопросы сотрудников, поиск по регламентам, анализ документов. Все данные внутри организации — без передачи наружу.</p>
 
       <ul class="project-results">
 
         <li>Анализ 100-стр. отчёта: <strong>3 ч → 12 минут</strong></li>
 
-        <li>Точность поиска в документах: <strong>92%</strong> (до Reranker: 68%)</li>
+        <li>Нагрузка на HR и поддержку: <strong>−40%</strong></li>
 
-        <li>Скорость ревью кода <strong>+70%</strong></li>
+        <li>Данные не покидают периметр организации</li>
 
       </ul>
 
@@ -1060,7 +1060,63 @@
 
       <div class="project-meta">
 
-        <span class="project-cat">Производство / Автоматизация</span>
+        <span class="project-cat">AI / Автоматизация</span>
+
+        <span class="project-dur">2 мес · 2 чел.</span>
+
+      </div>
+
+      <h3>Корпоративная база знаний на основе RAG</h3>
+
+      <p class="project-desc">RAG + Reranker поверх корпоративных документов. Умный поиск по методикам, регламентам, технической документации. Полностью локальный стек без внешних API.</p>
+
+      <ul class="project-results">
+
+        <li>Точность поиска по документам: <strong>68% → 92%</strong></li>
+
+        <li>Скорость ревью кода: <strong>+70%</strong></li>
+
+        <li>Поиск нужного документа: <strong>45 мин → 2 минуты</strong></li>
+
+      </ul>
+
+      <div class="project-team">👤 Роль: Руководитель проекта / Разработчик</div>
+
+    </div>
+
+    <div class="project-card" data-cat="ai">
+
+      <div class="project-meta">
+
+        <span class="project-cat">AI / Автоматизация</span>
+
+        <span class="project-dur">1 мес · 2 чел.</span>
+
+      </div>
+
+      <h3>Транскрибация звонков техподдержки (ASR → 1С)</h3>
+
+      <p class="project-desc">Автоматическое распознавание речи (Vosk/Whisper) с записью транскрипта в 1С. Автосоздание тикетов по обращениям. Закрытый контур — никаких внешних API.</p>
+
+      <ul class="project-results">
+
+        <li>Оформление обращения: <strong>10 мин → автоматически</strong></li>
+
+        <li>Точность распознавания речи: <strong>89%+</strong></li>
+
+        <li>Охват обращений транскрибацией: <strong>100%</strong></li>
+
+      </ul>
+
+      <div class="project-team">👤 Роль: Руководитель проекта / Разработчик</div>
+
+    </div>
+
+    <div class="project-card" data-cat="management">
+
+      <div class="project-meta">
+
+        <span class="project-cat">Управленческий учёт / Производство</span>
 
         <span class="project-dur">9 мес · 4 чел.</span>
 
@@ -1084,11 +1140,11 @@
 
     </div>
 
-    <div class="project-card" data-cat="analytics healthcare">
+    <div class="project-card" data-cat="management">
 
       <div class="project-meta">
 
-        <span class="project-cat">Аналитика / Управленческий учёт</span>
+        <span class="project-cat">Управленческий учёт / BI</span>
 
         <span class="project-dur">3 мес · 3 чел.</span>
 
@@ -1110,7 +1166,7 @@
 
     </div>
 
-    <div class="project-card" data-cat="analytics healthcare">
+    <div class="project-card" data-cat="management">
 
       <div class="project-meta">
 
@@ -1138,11 +1194,11 @@
 
     </div>
 
-    <div class="project-card" data-cat="analytics">
+    <div class="project-card" data-cat="management">
 
       <div class="project-meta">
 
-        <span class="project-cat">Документооборот / Регуляторные</span>
+        <span class="project-cat">Управленческий учёт / ЭДО</span>
 
         <span class="project-dur">8 мес · 7 чел.</span>
 
@@ -1304,11 +1360,11 @@
 
     </div>
 
-    <div class="project-card" data-cat="pmo healthcare">
+    <div class="project-card" data-cat="pmo medtech">
 
       <div class="project-meta">
 
-        <span class="project-cat">EdTech / Франчайзинг</span>
+        <span class="project-cat">MedTech / EdTech</span>
 
         <span class="project-dur">10 мес · 4 чел.</span>
 
@@ -1332,7 +1388,7 @@
 
     </div>
 
-    <div class="project-card" data-cat="analytics">
+    <div class="project-card" data-cat="management">
 
       <div class="project-meta">
 
@@ -1360,11 +1416,11 @@
 
     </div>
 
-    <div class="project-card" data-cat="analytics healthcare">
+    <div class="project-card" data-cat="management medtech">
 
       <div class="project-meta">
 
-        <span class="project-cat">Управленческий учёт / Healthcare</span>
+        <span class="project-cat">Управленческий учёт / MedTech</span>
 
         <span class="project-dur">5 мес · 3 чел.</span>
 
@@ -1470,11 +1526,11 @@
 
     </div>
 
-    <div class="project-card" data-cat="logistics">
+    <div class="project-card" data-cat="wms">
 
       <div class="project-meta">
 
-        <span class="project-cat">Логистика / WMS</span>
+        <span class="project-cat">Складской учёт / WMS</span>
 
         <span class="project-dur">6 мес · 4 чел.</span>
 
@@ -1500,11 +1556,11 @@
 
     </div>
 
-    <div class="project-card" data-cat="analytics healthcare">
+    <div class="project-card" data-cat="wms medtech">
 
       <div class="project-meta">
 
-        <span class="project-cat">Управленческий учёт / Healthcare</span>
+        <span class="project-cat">MedTech / Складской учёт</span>
 
         <span class="project-dur">4 мес · 3 чел.</span>
 
@@ -1530,11 +1586,11 @@
 
     </div>
 
-    <div class="project-card" data-cat="analytics">
+    <div class="project-card" data-cat="management">
 
       <div class="project-meta">
 
-        <span class="project-cat">Аналитика / Управленческий учёт</span>
+        <span class="project-cat">Управленческий учёт / Аналитика</span>
 
         <span class="project-dur">5 мес · 3 чел.</span>
 
@@ -1558,11 +1614,11 @@
 
     </div>
 
-    <div class="project-card" data-cat="analytics">
+    <div class="project-card" data-cat="medtech">
 
       <div class="project-meta">
 
-        <span class="project-cat">Управленческий учёт / Производство</span>
+        <span class="project-cat">MedTech / Производство</span>
 
         <span class="project-dur">3 мес · 3 чел.</span>
 
@@ -1586,11 +1642,11 @@
 
     </div>
 
-    <div class="project-card" data-cat="analytics healthcare">
+    <div class="project-card" data-cat="medtech">
 
       <div class="project-meta">
 
-        <span class="project-cat">Управленческий учёт / Healthcare</span>
+        <span class="project-cat">MedTech / Управленческий учёт</span>
 
         <span class="project-dur">4 мес · 3 чел.</span>
 
